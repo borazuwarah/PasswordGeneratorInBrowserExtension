@@ -7,7 +7,7 @@ document.getElementById('generate').addEventListener('click', function() {
 });
 
 function generatePassword(length) {
-  var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,;.:-_ñÑ´¨çÇ`^+*'?¡¿=()/\<>&%$·{}[]|@#~€¬";
+  var charset = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789.,:;-_<>çÇ^+*'?¡¿=()/&%$·{}[]|@#~€¬\\";
   var password = "";
   for (var i = 0; i < length; i++) {
     var randomIndex = Math.floor(Math.random() * charset.length);
@@ -16,14 +16,10 @@ function generatePassword(length) {
   return password;
 }
 
-// Obtener el campo de entrada de la longitud de la contraseña
+// Enter button
 var passwordLengthInput = document.getElementById('password-length');
-
-// Agregar un controlador de eventos para la tecla "Enter"
 passwordLengthInput.addEventListener('keyup', function(event) {
-  // Verificar si la tecla presionada es "Enter" (código 13)
   if (event.keyCode === 13) {
-    // Simular un clic en el botón de generar contraseña
     document.getElementById('generate').click();
   }
 });
