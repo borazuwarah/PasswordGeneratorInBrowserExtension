@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <title>Generador de Contraseñas</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <h1>Generador de Contraseñas</h1>
-  <label for="password-length">Longitud de la Contraseña:</label>
-  <input type="number" id="password-length" min="4" max="100" value="12">
-  <button id="generate">Generar Contraseña</button>
-  <div id="password"></div>
+  <div class="container">
+    <h1>Generador de Contraseñas</h1>
+    <div class="input-container">
+      <label for="password-length">Longitud de la Contraseña:</label>
+      <input type="number" id="password-length" min="4" max="100" value="12">
+    </div>
+    <button id="generate">Generar Contraseña</button>
+    <div id="password" class="password"></div>
+  </div>
 
   <script src="content.js"></script>
 </body>
